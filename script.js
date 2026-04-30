@@ -1,5 +1,4 @@
-// --- DATOS PERSONALES DE LAS CARTAS ---
-// Edita los textos y los nombres de las imágenes aquí
+
 const personalData = {
     alexis: {
         titulo: "De: Alexis",
@@ -40,7 +39,20 @@ const personalData = {
     },
     yeye: {
         titulo: "De: Yeye",
-        carta: "Shaebun Lance de la Madriguera en un campo de tulipanes.",
+        carta: "Shaebun Lance de la Madriguera en un Campo de Tulipanes; hola, otra vez.\n\n" +
+               "¡Estás cumpliendo dieciocho años! El tiempo pasa volando; ahora tienes la edad que yo tenía cuando te conocí, ¿no es así? Quiero decir que tengo plena fe en que serás una mejor recién llegada a la adultez de lo que cualquiera a mi alrededor pudo ser: sal, disfruta, explora, no te dejes llevar por malas influencias o comentarios y, sobre todo, sé tú, Sha.\n\n" +
+               "Al conocerte, decidir acercarme a ti fue una serie de coincidencias, en realidad, tu ímpetu por lo que te gusta, la sensibilidad oculta tras la indiferencia aparente característica de la edad, la interpretación preciosa de tu Lee Nan (que más tarde descubrí es propia de tu persona con cada personaje), en ese momento te reconocí como un alma viva, perspicaz. Incluso si el entorno podía ser hostil para ti, prevalecías; tras capas de cinismo construido como una barrera, adoptado y entremezclado, pude ver más allá: tu sensibilidad, el trabajo que hacías para ti, esa manía de perfeccionismo que nace de querer estabilizarte tú antes que permitirlo a nadie más, eres un humanito digno de detenerse a apreciar, complejo, y que no me atrevo a intentar describir más allá con solo el recuerdo a mano.\n\n" +
+               "Confieso que no recuerdo muchas cosas, pero otras sí, como tu amor al deporte, tus aspiraciones que cumples hoy en día de jugar como líbero, tus bromas irónicas y la afición que jamás comprendí a la palta y al té con leche, aunque debo aceptar que este último es bastante bueno.\n\n" +
+               "Me gustaría halagarte más, me gustaría decir que estoy orgullosa, pero no puedo; no puedo porque la oportunidad y el derecho no están a mi nombre, la distancia es marcada incluso si el cariño prevalece, así que ¿sabes qué? Estoy jodidamente feliz por ti, Bun, por todo lo que has logrado a día de hoy, por dar el paso adelante incluso si fue sin querer, o con miedo; porque el temer te hace humana, pero hacer las cosas a pesar de lo que te pesa, te hace valiente.\n\n" +
+               "Felicidades por tu graduación.\n" +
+               "Felicidades por entrar a estudiar un técnico.\n" +
+               "Felicidades por quedarte.\n" +
+               "Felicidades por una Navidad más.\n" +
+               "Felicidades por un Año Nuevo más.\n\n" +
+               "Los dieciocho no son la gran cosa, son un número más, es un DNI a tu nombre y, si pones mucho cuidado, la repentina conciencia de que ahora sí pagarás tú por tus errores ante la ley, pero, quien los hace importantes eres tú ¿no? Así que avanza, Sha, avanza para que te llenes de recuerdos agradables y personas que sumen, avanza aceptando la realidad de las cosas y entendiendo que las consecuencias (incluso las de una mala resaca) vienen para enseñarnos algo.\n\n" +
+               "Come algo rico, date un baño cálido, observa con cariño a quien lo despierte, pregunta cuando tengas dudas y permite que quien responda sea quien sí puede darte una respuesta, y no quien cree que puede.\n\n" +
+               "Gracias, Sha, por la oportunidad de estar aquí, aunque sea a través de un texto.\n\n" +
+               "Con cariño, Yeye.",
         fotos: ["assets/yeyeimage.png", "assets/yeyeimage1.png", "assets/yeyeimage2.png", "assets/yeyeimage3.png"]
     },
     dokkiu: {
@@ -59,7 +71,7 @@ const personalData = {
                "Sacando a relucir el tema universitario, no tengo mucho que agregar más que asegurarte sobre tu gran rendimiento académico. veo qué tanto te esfuerzas, y quisiera decirte que puede llegar a complicarse tu acomodación en esta nueva rutina, y quizás parezca tediosa esta nueva vida, sin embargo, haces lo que puedes y se nota. buen trabajo, sha, no me cabe duda de que eres alguien magnífico en el campo que sea.\n\n" +
                "Por mi parte, no hay más que pueda escribir en esta carta donde congrego opiniones acumuladas acerca de tu persona, pero no puedes imaginar cuan satisfecha me siento por tenerte como amigo. eres especial para mí, y te quiero mundos.\n\n" +
                "De aquí a la luna a pasitos de tortuga, y de aquí al sol a pasitos de caracol; dokkiu. 🫲🏻🤍🫱🏻",
-        fotos: ["assets/dokkiu_1.jpg"]
+        fotos: ["assets/dokkiuimage.png"]
     },
     ax: {
     titulo: "De: Ax",
@@ -68,7 +80,6 @@ const personalData = {
 }
 };
 
-// --- LÓGICA DE NAVEGACIÓN Y LOGIN ---
 
 function checkLogin() {
     const pass = document.getElementById('password').value;
@@ -98,7 +109,6 @@ function showScreen(id) {
     }
 }
 
-// --- LÓGICA DEL MINIJUEGO ---
 
 function moveButton() {
     const btn = document.getElementById('btn-si');
@@ -121,7 +131,6 @@ function finishGame() {
     showScreen('main-screen');
 }
 
-// --- LÓGICA DE LAS CARTAS (MODAL) ---
 
 function openModal(person) {
     const data = personalData[person];
@@ -175,7 +184,6 @@ function closeModal() {
     document.getElementById('personal-modal').style.display = 'none';
 }
 
-// Cerrar modal al hacer click fuera del contenido
 window.onclick = function(event) {
     const modal = document.getElementById('personal-modal');
     if (event.target == modal) {
@@ -183,7 +191,6 @@ window.onclick = function(event) {
     }
 }
 
-// Escuchar tecla Enter
 document.getElementById('password')?.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         checkLogin();
