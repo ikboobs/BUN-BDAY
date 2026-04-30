@@ -29,13 +29,15 @@ const personalData = {
     },
     astie: {
         titulo: "De: Astié",
-        carta: "En proceso.",
-        fotos: ["assets/astie_1.jpg", "assets/astie_2.jpg"]
+        carta: "Mí dulce bebé conejito;\n\nimagina tres conejos corriendo entre el pastizal, el más pequeñito de ellos tropieza, y por un instante parece intimidado por la atmósfera del lugar, entonces, los dos restantes se aproximan a él, y con una calidez hogareña le cubren, y le invitan a levantarse por retomar aquella dulce travesía.\n\n" +
+               "Lance, nadie puede comprar el futuro, y sería contraproducente prometerte que eternamente estaré aquí, porque desconozco las intenciones del destino, sin embargo, una cosa es segura, y es que sin importar a dónde vayas, o donde termines, habrá un lugar en mí corazón que eternamente estará apartado para ti, independientemente de que tan lejos estemos uno del otro, tú ya eres mi bebé conejo, y yo ya soy tu madre en una travesía imprevista, pero no mal recibida.\n\n" +
+               "De todo corazón, deseo y anhelo que tengas una vida maravillosa, llena de todos los exitos que te mereces, sumida en lo gratificante de lo excepcionalmente asombroso que eres, y que, por más altibajos que pueda llegar a presentar, tú tengas la valentía, el valor, y sobre todo lo seguridad, de que eres una persona llena de fuerza, determinación, y muchísimo cariño, tanto para ti mismo, como para los que te rodeamos.\n\n" +
+               "Lo hiciste increíble, lo haces maravilloso, y lo harás fantástico, solamente confía en ti, en tus cualidades, y en tus incomparables aptitudes, mí pequeño.",
+        fotos: ["assets/astieimage.png"]
     },
     crimson: {
         titulo: "De: Crimson",
-        carta: "En proceso",
-        fotos: ["assets/crimson_1.jpg"]
+        carta: "Crimson se fue por cigarrillos.",
     },
     yeye: {
         titulo: "De: Yeye",
