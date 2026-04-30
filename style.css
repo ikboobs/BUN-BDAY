@@ -1,0 +1,413 @@
+:root {
+    --jax-purple: #9C27B0;
+    --jax-pink: #ff007f;
+    --bg-dark: #0a0a0a;
+    --glass: rgba(255, 255, 255, 0.08);
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background: radial-gradient(circle at 70% 20%, rgba(156, 39, 176, 0.3) 0%, var(--bg-dark) 70%),
+                radial-gradient(circle at 10% 80%, rgba(255, 0, 127, 0.2) 0%, var(--bg-dark) 70%);
+    background-color: var(--bg-dark);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.active { 
+    display: flex !important; 
+}
+
+#login-screen, #game-screen {
+    justify-content: center; /* Centra verticalmente */
+}
+
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 35px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    width: 90%;
+    max-width: 360px;
+}
+
+.jax-shadow {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.jax-shadow img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--jax-pink);
+    filter: drop-shadow(0 0 15px rgba(255, 0, 127, 0.6));
+    background-color: #000;
+}
+
+h1 {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+}
+
+input {
+    background: rgba(255,255,255,0.05);
+    border: 2px solid var(--jax-pink);
+    border-radius: 20px;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.btn-main, .rounded-btn {
+    background-color: var(--jax-pink);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-main:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 0, 127, 0.6);
+}
+
+#btn-si {
+    background: transparent;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.header {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.vinyl-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.vinyl {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--jax-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+    animation: rotate 5s linear infinite;
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.3);
+}
+
+.vinyl-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.message-birthday {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 95%;
+    max-width: 500px;
+    padding: 35px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.message-birthday h3 {
+    color: var(--jax-pink);
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.birthday-text p {
+    color: #eee;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.birthday-text p:last-child {
+    margin-bottom: 0;
+    color: white;
+    font-weight: 500;
+    border-top: 1px solid rgba(255, 0, 127, 0.2);
+    padding-top: 20px;
+}
+
+.parrillada-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.parrillada-img {
+    width: 90%;
+    max-width: 450px;
+    border-radius: 25px;
+    border: 2px solid var(--jax-pink);
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
+    object-fit: cover;
+}
+
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 80px;
+}
+
+.char-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.circle {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 3px solid var(--jax-pink);
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease;
+}
+
+.char-card:hover .circle {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.5);
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.char-card p {
+    font-size: 0.75rem;
+    margin-top: 10px;
+    color: #ccc;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.final-row {
+    grid-column: 1 / -1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-content {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 35px;
+    width: 90%;
+    max-width: 450px; 
+    max-height: 85vh; 
+    overflow-y: auto;
+    position: relative;
+    padding: 45px 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--jax-pink);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+}
+
+.modal-body h2 {
+    color: var(--jax-pink);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+
+.modal-letter {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ddd;
+    text-align: justify;
+    margin-bottom: 25px;
+    white-space: pre-wrap; /* Respeta los saltos de línea */
+}
+
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.modal-gallery img {
+    width: 100%;
+    height: auto; 
+    max-height: 250px; 
+    border-radius: 15px;
+    border: 1px solid rgba(255, 0, 127, 0.3);
+    object-fit: contain; 
+    background-color: rgba(0,0,0,0.2);
+}
+
+.modal-gallery img:only-child {
+    grid-column: 1 / -1; 
+    max-width: 100%;
+    max-height: 400px;
+    margin: 0 auto;
+    display: block;
+    border: 2px solid var(--jax-pink);
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+}
+
+.tarot-card {
+    background-color: transparent;
+    width: 100%;
+    height: 250px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.tarot-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.tarot-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.tarot-front, .tarot-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    border: 2px solid var(--jax-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.tarot-back {
+    background: rgba(20, 20, 20, 0.95);
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+    font-size: 0.85rem;
+    font-style: italic;
+    border: 2px solid white;
+}
+
+.tarot-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 380px) {
+    h1 { font-size: 1.2rem; }
+    .circle { width: 75px; height: 75px; }
+    .glass-card { padding: 20px; }
+    .modal-content { padding: 35px 15px; }
+}

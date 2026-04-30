@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vhaëzkar - Digital Circus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="login-screen" class="screen active">
+        <div class="glass-card login-box">
+            <div class="jax-shadow">
+                <img src="assets/jax_login.png" alt="Jax">
+            </div>
+            <h1>SHAEBUN D'AELION</h1>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Contraseña..." maxlength="2">
+            </div>
+            <button class="btn-main rounded-btn" onclick="checkLogin()">ACCEDER</button>
+        </div>
+    </section>
+
+    <section id="game-screen" class="screen">
+        <div class="glass-card game-card">
+            <h2>¿Sabes cuántas personas te aprecian?</h2>
+            <div class="game-area">
+                <button id="btn-si" class="rounded-btn game-btn" onmouseover="moveButton()" onclick="moveButton()">SÍ</button>
+                <button class="btn-main rounded-btn game-btn" onclick="finishGame()">NO</button>
+            </div>
+        </div>
+    </section>
+
+<section id="main-screen" class="screen">
+    <header class="header">
+        <div class="vinyl-container">
+            <div class="vinyl">
+                <img src="assets/spotify.png" alt="Spotify Logo" class="vinyl-img">
+            </div>
+            <a href="https://open.spotify.com/playlist/6zXb1PrgqXEI8otMnlijH0?si=65b1bc12cc8d4a5a" target="_blank" class="btn-main rounded-btn playlist-btn">
+                CLICK HERE
+            </a>
+        </div>
+    </header>
+
+    <div class="glass-card message-birthday">
+    <h3>¡Feliz cumpleaños, Shane!</h3>
+    <div class="birthday-text">
+        <p>Hoy celebramos no solo un año más, sino todo lo que eres y todo lo que has construido a lo largo de este tiempo. Llegar a los 18 no es cualquier cosa; es un punto de cambio, de crecimiento, de nuevos comienzos… y no podríamos estar más felices de poder compartirlo contigo.</p>
+        
+        <p>A lo largo de los días, has demostrado ser alguien verdaderamente especial: auténtica, increíblemente genial y con una esencia que no pasa desapercibida. Tienes esa forma única de iluminar momentos, de hacer que todo se sienta un poco más ligero, más bonito, más vivo. Y aunque quizás no siempre lo notes, dejas huella en quienes tenemos la suerte de coincidir contigo.</p>
+        
+        <p>Hoy queremos que recuerdes algo muy simple pero muy cierto: importas, y mucho. Tu presencia suma, tu forma de ser marca, y tu existencia hace que todo sea un poco mejor. No es solo un cumpleaños, es la celebración de todo lo que eres y de todo lo que aún te espera.</p>
+        
+        <p>Gracias por dejarnos estar a tu lado, por los momentos compartidos, por las risas, por lo que se dice y también por lo que no hace falta decir. Eres alguien que vale la pena en cada sentido, y esperamos que este nuevo año te traiga todo lo que mereces (que es muchísimo).</p>
+    </div>
+</div>
+
+    <div class="parrillada-container">
+        <img src="assets/parrillada.png" alt="Parrillada" class="parrillada-img">
+    </div>
+
+    <div class="character-grid">
+        </div>
+
+<div class="character-grid">
+    <div class="char-card" onclick="openModal('alexis')">
+        <div class="circle"><img src="assets/ragatha.png" alt="Alexis"></div>
+        <p>ALEXIS</p>
+    </div>
+    <div class="char-card" onclick="openModal('calypso')">
+        <div class="circle"><img src="assets/bubble.png" alt="Calypso"></div>
+        <p>CALYPSO</p>
+    </div>
+    <div class="char-card" onclick="openModal('astie')">
+        <div class="circle"><img src="assets/queenie.png" alt="Astié"></div>
+        <p>ASTIÉ</p>
+    </div>
+    <div class="char-card" onclick="openModal('crimson')">
+        <div class="circle"><img src="assets/kinger.png" alt="Crimson"></div>
+        <p>CRIMSON</p>
+    </div>
+    <div class="char-card" onclick="openModal('yeye')">
+        <div class="circle"><img src="assets/zooble.png" alt="Yeye"></div>
+        <p>YEYE</p>
+    </div>
+    <div class="char-card" onclick="openModal('dokkiu')">
+        <div class="circle"><img src="assets/ribbit.png" alt="Dokkiu"></div>
+        <p>DOKKIU</p>
+    </div>
+    <div class="char-card final-row" onclick="openModal('ax')">
+        <div class="circle"><img src="assets/gangle.png" alt="Ax"></div>
+        <p>AX</p>
+    </div>
+</div>
+
+<div id="personal-modal" class="modal">
+    <div class="modal-content glass-card">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div id="modal-body">
+            </div>
+    </div>
+</div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
